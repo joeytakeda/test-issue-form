@@ -1,60 +1,42 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
-labels: [bug, triage]
+title: ""
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: What isn't working as expected on the website?
+      placeholder: When I add new information to an existing record in the database, I can only see this new information in the website’s backend. I can’t see it in the search results.
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: If you encountered an error message, please copy the relevant details or take a screenshot and paste it below.
+      description: If you see an error message, please use the copy details button to copy and paste the information into the bug report.
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: input
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+      label: What is the URL of the page where you encountered the bug?
+      description: If you unable to share the full URL, please include as much of the URL as possible. Type NA if not applicable.
+      placeholder: https://dhil.lib.sfu.ca/my-project/person/9
+    validations:
+      required: true
   - type: textarea
-    id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: What steps did you take before your encountered the bug?
+      description: Please provide information such as: how you got to the error, how often the errors occurs, what button you've clicked, or what was typed.
+      value: |
+        1. ...
+        2. ...
+        3. ...
+      validations:
+        required: true
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: By submitting this issue, you agree to follow our Code of Conduct and have read the Guidelines for Submitting Issues.
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
